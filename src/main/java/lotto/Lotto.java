@@ -27,5 +27,21 @@ public class Lotto {
         }
     }
 
-    // TODO: 추가 기능 구현
+    public boolean contains(int n) {
+        return numbers.contains(n);
+    }
+
+    public int countMatchesWith(List<Integer> main) {
+        int cnt = 0;
+
+        for (int n : main) {
+            if (numbers.contains(n)) cnt++;
+        }
+
+        return cnt;
+    }
+
+    public List<Integer> numbers() {
+        return List.copyOf(numbers);
+    }
 }
