@@ -1,23 +1,12 @@
 package lotto;
 
-import java.util.List;
-
-public class LottoJudge {
+public final class LottoJudge {
 
     private LottoJudge() {}
 
     public static Rank judge(Lotto ticket, WinningNumbers winning) {
-        List<Integer> t = ticket.numbers();
-        List<Integer> w = winning.main();
-
-        int matchCount = 0;
-        for (int n : t) {
-            if (w.contains(n)) {
-                matchCount++;
-            }
-        }
-
-        boolean bonusMatched = t.contains(winning.bonus());
-        return Rank.of(matchCount, bonusMatched);
+        int match = ticket.countMatchesWith(winning.main());
+        boolean bonus = (match == 5) && ticket.contains(winning.bonus());
+        return Rank.of(match, bonus);
     }
 }
