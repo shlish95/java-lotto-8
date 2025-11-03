@@ -30,6 +30,6 @@ public class Result {
     }
 
     public Map<Rank, Integer> snapshot() {
-        return new EnumMap<>(Rank.class);
+        return new EnumMap<>(counts);
     }
 }

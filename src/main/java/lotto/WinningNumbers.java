@@ -8,7 +8,7 @@ public class WinningNumbers {
     private static final String ERR_PREFIX = "[ERROR] ";
     private static final String ERR_MAIN_FORMAT = ERR_PREFIX + "당첨 번호는 쉼표(,)로 구분된 6개 숫자여야 합니다.";
     private static final String ERR_BONUS_RANGE = ERR_PREFIX + "보너스 번호는 1부터 45 사이여야 합니다.";
-    private static final String ERR_BONUS_DUP = ERR_PREFIX + "보너스 번호는 당청 번호와 중복될 수 없습니다.";
+    private static final String ERR_BONUS_DUP = ERR_PREFIX + "보너스 번호는 당첨 번호와 중복될 수 없습니다.";
 
     private final List<Integer> main;
     private final int bonus;
