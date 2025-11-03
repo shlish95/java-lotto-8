@@ -24,6 +24,6 @@ public class ProfitRate {
     }
 
     public String format() {
-        return percent.stripTrailingZeros().toPlainString();
+        return percent.stripTrailingZeros().toPlainString() + "%";
     }
 }

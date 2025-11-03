@@ -13,7 +13,7 @@ public class LottoMachine {
         List<Lotto> tickets = new ArrayList<>(count);
 
         for (int i = 0; i < count; i++) {
-            List<Integer> numbers = Randoms.pickUniqueNumbersInRange(1, 45, 6);
+            List<Integer> numbers = new ArrayList<>(Randoms.pickUniqueNumbersInRange(1, 45, 6));
             Collections.sort(numbers);
             tickets.add(new Lotto(numbers));
         }
