@@ -25,4 +25,5 @@ class MatchAggregationTest {
         assertEquals(1, result.count(Rank.FIFTH));
         assertEquals(3, result.snapshot().values().stream().mapToInt(i->i).sum());
     }
+
 }
